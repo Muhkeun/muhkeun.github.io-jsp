@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="emp">
+    <select id="total" resultType="vo.EmpVO">
+    select * from emp
+  </select>
+<!--    resultType: 결과를 반환할 객체, parameterType: 인자의 자료형 그 인자는 조건의 값으로 쓰인다.-->
+    <select id="search_name" resultType="vo.EmpVO" parameterType="String">
+    select * from emp where ename like '%'||#{name}||'%'
+    </select>
+</mapper>
