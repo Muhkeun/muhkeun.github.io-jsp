@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memo">
+
+<!--    1. 목록을 만들기 위한 Select-->
+    <select id ="total" resultType="mybatis.vo.MemoVO">
+        select * from memo_t order by idx desc
+    </select>
+<!--    2. 저장을 위한 Insert-->
+    <insert id="add" parameterType="java.util.Map">
+        insert into memo_t(idx, writer, content, reg_date, ip)
+        values (memo_seq.nextval, #{writer}, #{content}, sysdate, #{ip})
+    </insert>
+
+<!--    3. 보기를 위한 Select-->
+    <select id="get_memo" resultType="mybatis.vo.MemoVO" parameterType="String">
+        SELECT  * from memo_t
+        where idx = #{idx}
+    </select>
+<!--    4. 검색을 위한 Select (동적 쿼리)-->
+    <select id="search" parameterType="java.util.Map" resultType="mybatis.vo.MemoVO">
+        select * from memo_t
+        <if test ="searchType != null and searchValue != null">
+            <trim prefix="where">
+                <choose>
+                    <when test="searchType == 0">
+                        writer LIKE '%'||#{searchValue}||'%'
+                    </when>
+                    <when test="searchType == 1">
+                        content LIKE '%'||#{searchValue}||'%'
+                    </when>
+                    <when test="searchType == 2">
+                        to_char(reg_date, 'yyyy-mm-dd') LIKE '%'||#{searchValue}||'%'
+                    </when>
+                </choose>
+            </trim>
+        </if>
+    </select>
+<!--    5. 수정을 위한 Update-->
+</mapper>
