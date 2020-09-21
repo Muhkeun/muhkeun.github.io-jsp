@@ -1,0 +1,20 @@
+Web-Hard 만들기
+- 회원가입
+- 로그인 / 로그아웃
+
+- 자바의 입출력 (파일처리)
+- 라이브러리 활용 (COS 라이브러리: 파일업로드)
+- 파일 다운로드(JSP로 구현)
+
+테이블과 컬럼 생성
+
+create table member_t
+(
+    m_id    varchar2(20),
+    m_pw    varchar2(20) not null,
+    m_name  varchar2(30),
+    m_addr  varchar2(50),
+    m_phone varchar2(15),
+    m_email varchar2(50),
+    CONSTRAINT member_pk PRIMARY KEY (m_id)
+);
