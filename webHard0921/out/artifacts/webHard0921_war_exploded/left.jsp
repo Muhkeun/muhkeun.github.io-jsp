@@ -1,4 +1,5 @@
-<%@ page import="com.sun.org.apache.bcel.internal.generic.ObjectType" %><%--
+<%@ page import="com.sun.org.apache.bcel.internal.generic.ObjectType" %>
+<%@ page import="mybatis.vo.MemberVO" %><%--
   Created by IntelliJ IDEA.
   User: muhkeun
   Date: 2020/09/21
@@ -6,9 +7,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>로그인</title>
 
@@ -106,10 +112,13 @@
 </div>
 <%
     }else{
+        //obj가 있는 경우 이므로 우리가 login.jsp에서 uvo라는 이름으로
+        //session에 저장할 당시 MemberVO를 저장.
+        MemberVO vo = (MemberVO)obj;
 %>
 <div id="log_suc" class="">
 
-    <p>(마루치)님 환영</p>
+    <p><%=vo.getM_name()%>님 환영</p>
     <p class="btn">
         <a href="logout.jsp">로그아웃</a>
     </p>

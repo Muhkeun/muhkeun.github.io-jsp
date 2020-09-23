@@ -6,7 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%
+String msg = request.getParameter("msg");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +17,6 @@
 </head>
 <frameset cols="190,*" border="0">
   <frame src="left.jsp" name="left"/>
-  <frame src="https://blog.naver.com/frogramo" name="right"/>
+  <frame src="right.jsp?msg=<%=msg%>" name="right"/>
 </frameset>
 </html>
