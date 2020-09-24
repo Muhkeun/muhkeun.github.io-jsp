@@ -1,53 +1,50 @@
 package mybatis.vo;
 
 public class MemberVO {
-    private String id, pw, name, addr, phone, email;
+    private String m_id;
+    private String m_name;
+    private String m_addr;
+    private String m_phone;
 
-    public String getId() {
-        return id;
+    public String getM_id() {
+        return m_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setM_id(String m_id) {
+        this.m_id = m_id;
     }
 
-    public String getPw() {
-        return pw;
+    public String getM_name() {
+        return m_name;
     }
 
-    public void setPw(String pw) {
-        this.pw = pw;
+    public void setM_name(String m_name) {
+        this.m_name = m_name;
     }
 
-    public String getName() {
-        return name;
+    public String getM_addr() {
+        return m_addr;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setM_addr(String m_addr) {
+        this.m_addr = m_addr;
     }
 
-    public String getAddr() {
-        return addr;
+    public String getM_phone() {
+        return m_phone;
     }
 
-    public void setAddr(String addr) {
-        this.addr = addr;
+    public void setM_phone(String m_phone) {
+        this.m_phone = m_phone;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getM_email() {
+        return m_email;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setM_email(String m_email) {
+        this.m_email = m_email;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    private String m_email;
 }

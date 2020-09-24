@@ -1,5 +1,7 @@
 package mybatis.dao;
 
+import mybatis.vo.MemberVO;
+import org.apache.axis.session.Session;
 import org.apache.ibatis.session.SqlSession;
 import mybatis.service.FactoryService;
 
@@ -34,5 +36,23 @@ public class memberDAO {
             ss.close();
         }
         return value;
+    }
+
+    //로그인 기능 - login.jsp에서 호출
+    public static MemberVO login(String u_id, String u_pw){
+        //login이라는 mapper를 사용하기 위해서 Map을 만들어서 그 곳에
+        //보내고자 하는 파라미터 값 (u_id, u_pw)를 저장해야 한다.
+        Map<String, String> map = new Hashtable<String, String>();
+        map.put("u_id", u_id);
+        map.put("u_pw", u_pw);
+
+        SqlSession ss = FactoryService.getFactory().openSession();
+        //id와 pw가 정확할 때만 vo를 받는다.
+        MemberVO vo = ss.selectOne("mem.login", map);
+
+
+        ss.close();
+        return vo;
+
     }
 }
