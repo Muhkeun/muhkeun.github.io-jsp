@@ -1,0 +1,17 @@
+정보: 사원정보 (사번, 이름, 직무)
+
+    String empno = "1200"; ---> "empno" :"1200"
+    String ename = "홍길동"; ---> "ename" :"홍길동"
+    String job = "DEV";    ---> "job" : "DEV"
+
+    class EmpVO{
+
+        String empno ="1200";               "empno" : "1200"
+        String ename ="홍길동";        --->   "ename" : "홍길동"
+        String job ="DEV";                  "job"   : "DEV"
+    }
+==================================================================\
+
+    [{"empno" : "1200", "ename":"홍길동", "job":"DEV"},
+    [{"empno" : "1100", "ename":"임꺽정", "job":"DEV"}]
+
