@@ -15,3 +15,7 @@
 ### 5일차 쇼핑몰, aws 이용하여 배포 (09월 29일 ~)
 * [usebean](https://github.com/Muhkeun/muhkeun.github.io-jsp/tree/master/shop0929).
 * [쇼핑몰 배포](http://www.muhkeun.com/shop/shop.jsp).
+
+### 6일차 MVC패턴으로 로그인 로그아웃 구현 (10월 7일 ~)
+* [login, logout](https://github.com/Muhkeun/muhkeun.github.io-jsp/tree/master/1009Mvc).
+
