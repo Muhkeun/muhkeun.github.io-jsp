@@ -19,3 +19,7 @@
 ### 6일차 MVC패턴으로 로그인 로그아웃 구현 (10월 7일 ~)
 * [login, logout](https://github.com/Muhkeun/muhkeun.github.io-jsp/tree/master/1009Mvc).
 
+### 7일차 JSTL (10월 12일 ~)
+* [JSTL](https://github.com/Muhkeun/muhkeun.github.io-jsp/tree/master/Jstl1012).
+
+
