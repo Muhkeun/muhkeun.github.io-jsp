@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Jstl1012:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Jstl1012_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Jstl1012/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Jstl1012" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="standard" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
