@@ -22,4 +22,7 @@
 ### 7일차 JSTL (10월 12일 ~)
 * [JSTL](https://github.com/Muhkeun/muhkeun.github.io-jsp/tree/master/Jstl1012).
 
+### 8일차 게시판 (10월 14일 ~)
+* [MVC패턴으로 게시판 만들기](https://github.com/Muhkeun/muhkeun.github.io-jsp/tree/master/Bbs_MVC1014).
+
 
